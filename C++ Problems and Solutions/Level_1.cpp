@@ -25,3 +25,15 @@ int main() {
     std::cout<< "hello world" << std::endl;
     return 0;
 }
+
+////////////////////////////////////////////////////////////////////////
+
+#include <iostream>
+
+int main(){
+
+    for (int i = 1; i<= 10; i++){
+         std::cout << i << " ";
+    }
+       return 0;
+}
