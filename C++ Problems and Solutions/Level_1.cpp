@@ -37,3 +37,35 @@ int main(){
     }
        return 0;
 }
+
+////////////////////////////////////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int number;
+    cout << "Enter a number ";
+    cin >> number;
+    if(number % 2 == 0){
+
+        cout << number << " is even." << endl;
+    } else {
+        cout << number << " is odd." << endl;
+    }
+    cout << "counting from 1 to 5 using a for loop: ";
+    for (int i = 1; i <= 5; i++){
+        cout << i << " ";
+    }
+
+    cout << "counting from 5 to 1 using a while loop: ";
+    int i = 5;
+    while(i >= 1){
+        cout << i << " ";
+        i--;
+    }
+    cout << endl;
+    return 0;
+
+}
