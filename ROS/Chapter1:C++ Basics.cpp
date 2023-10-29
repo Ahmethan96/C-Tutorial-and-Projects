@@ -27,6 +27,7 @@
     }  
 9 - https://s3.eu-west-1.amazonaws.com/notebooks.ws/cpp_for_robotics/unit2.html?AWSAccessKeyId=AKIAJLU2ZOTUFJRMDOAA&Signature=bULcAvkFhgw49btZAKZxWFPi%2BAI%3D&Expires=1698521127#Code-explanation
 
+#######################################################################################
 
 // Data Types > int, float, double, char and string
 #include <iostream>
@@ -46,3 +47,23 @@ int main(){
     cout << "this is float "<< b << endl;
     cout << "this is double " << c << endl;
 }
+
+########################################################################################
+
+// Lists 
+list<int> numbers_list({1, 10, 100, 1000});
+list<string> vocals_list({"a", "e", "i", "o", "u"});
+
+for(int val : numbers_list)
+    cout << val << endl;
+
+for(string voc : vocals_list)
+    cout << voc << ' ';
+
+numbers_list.push_front(0);
+numbers_list.push_back(3000);
+
+for(int val1 : numbers_list)
+    cout << val1 << endl;
+
+########################################################################################
