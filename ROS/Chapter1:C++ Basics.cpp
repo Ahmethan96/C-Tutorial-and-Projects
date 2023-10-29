@@ -28,18 +28,21 @@
 9 - https://s3.eu-west-1.amazonaws.com/notebooks.ws/cpp_for_robotics/unit2.html?AWSAccessKeyId=AKIAJLU2ZOTUFJRMDOAA&Signature=bULcAvkFhgw49btZAKZxWFPi%2BAI%3D&Expires=1698521127#Code-explanation
 
 
-// Data Types
+// Data Types > int, float, double, char and string
 #include <iostream>
 
 using namespace std;
 int a = 3;
 float b = 0.23;
 double c = 0.22565873984;
-
+char d[6] = "hello";
+string e = "developer";
 
 int main(){
 
-    cout << "this is int " << a <<endl;
-    cout << "this is float "<< b <<endl;
-    cout << "this is double " << c <<endl;
+    cout << "this is char " << d[0] << endl;
+    cout << "this is string "<< e << endl;
+    cout << "this is int " << a << endl;
+    cout << "this is float "<< b << endl;
+    cout << "this is double " << c << endl;
 }
