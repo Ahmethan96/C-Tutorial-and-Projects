@@ -67,3 +67,25 @@ for(int val1 : numbers_list)
     cout << val1 << endl;
 
 ########################################################################################
+
+// Dictionary 
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main(){
+
+    map<string, int> girls_dictionary;
+
+    girls_dictionary["Dolores"] = 30;
+    girls_dictionary["Maeve"] = 27;
+    girls_dictionary["Theresa"] = 6;
+    girls_dictionary["Clementine"] = 11;
+
+    for(auto item : girls_dictionary)
+        cout << item.first << " appear in " << item.second << " episodes\n";
+
+}
+
+########################################################################################
+
