@@ -15,9 +15,12 @@ Print the dictionary with the code provided in the Dictionaries section.
 Remember to compile and execute the file as explained in section 1.2.
 - do the following before any changes.
 
-cd ~/catkin_ws
-catkin_make
-source devel/setup.bash
+* cd ~/catkin_ws
+* catkin_make
+* source devel/setup.bash
+the below command to execute the code
+* rosrun c_scripts unit1_exercise 
+
 https://s3.eu-west-1.amazonaws.com/notebooks.ws/cpp_for_robotics/unit2.html?AWSAccessKeyId=AKIAJLU2ZOTUFJRMDOAA&Signature=bULcAvkFhgw49btZAKZxWFPi%2BAI%3D&Expires=1698521127#Code-explanation
 ###################################################################################################
 Original code 
