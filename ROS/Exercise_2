@@ -61,4 +61,27 @@ int main(int argc, char **argv) {
 Solution 
 #####################################################################################################
 
+#include "rosbot_control/rosbot_class.h"
+#include <ros/ros.h>
+#include <string>
+#include <list>
+#include <iostream>
+#include <map>
+using namespace std; 
 
+
+int main(int argc, char **argv) {
+  ros::init(argc, argv, "rosbot_node");
+
+  RosbotClass rosbot;
+  map<string, int> position;
+  position["x"] = rosbot.get_position(1)
+  position["y"] = rosbot.get_position(2)
+  
+  for(int ahead; ahead <= 12; ahead++){
+  rosbot.move();
+  cout << "the x position is " << position["x"] << " ";
+  }
+  
+  return 0;
+}
