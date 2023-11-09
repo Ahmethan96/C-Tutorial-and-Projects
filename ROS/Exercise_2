@@ -124,3 +124,45 @@ int main(int argc, char **argv) {
   
   return 0;
 }
+
+
+#####################################################################################################
+Actual_Solution 
+#####################################################################################################
+
+#include "rosbot_control/rosbot_class.h"
+#include <iostream>
+#include <list>
+#include <map>
+#include <ros/ros.h>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char **argv) {
+  ros::init(argc, argv, "rosbot_node");
+
+  RosbotClass rosbot;
+  rosbot.move();
+
+  float x_0 = rosbot.get_position(1);
+  double t_0 = rosbot.get_time();
+
+  ROS_INFO_STREAM(x_0 << " and " << t_0);
+  rosbot.move();
+
+  float x_1 = rosbot.get_position(1);
+  double t_1 = rosbot.get_time();
+  ROS_INFO_STREAM(x_1 << " and " << t_1);
+
+  map<double, float> x_t_dictionary;
+  x_t_dictionary[t_0] = x_0;
+  x_t_dictionary[t_1] = x_1;
+
+  for (auto item : x_t_dictionary) {
+    ROS_INFO_STREAM("Time " << item.first << ", position " << item.second
+                            << " \n");
+  }
+
+  return 0;
+}
