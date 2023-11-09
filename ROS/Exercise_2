@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
 }
 
 #####################################################################################################
-Solution 
+First_Attempt_Solution 
 #####################################################################################################
 
 #include "rosbot_control/rosbot_class.h"
@@ -81,6 +81,45 @@ int main(int argc, char **argv) {
   for(int ahead; ahead <= 12; ahead++){
   rosbot.move();
   cout << "the x position is " << position["x"] << " ";
+  }
+  
+  return 0;
+}
+
+
+#####################################################################################################
+Second_Attempt_Solution 
+#####################################################################################################
+
+#include "rosbot_control/rosbot_class.h"
+#include <ros/ros.h>
+#include <string>
+#include <list>
+#include <iostream>
+#include <map>
+using namespace std; 
+
+
+int main(int argc, char **argv) {
+  ros::init(argc, argv, "rosbot_node");
+
+  RosbotClass rosbot;
+  map<string, int> position;
+  position["x"] = rosbot.get_position(1);
+  position["y"] = rosbot.get_position(2);
+  position["time_stemp"] = rosbot.get_time();
+  
+  for(int ahead; ahead <= 12; ahead++){
+  rosbot.move();
+  position["x"] = rosbot.get_position(1);
+  position["time_stemp"] = rosbot.get_time();
+  
+  cout << "the x position is " << position["x"] << " ";
+  }
+
+  for(auto ibo : position){
+  cout << ibo.first << ibo.second << " ";
+  
   }
   
   return 0;
